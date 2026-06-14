@@ -3,4 +3,19 @@ IMPORTANT FOR UNDERSTANDING why sometimes github shows differences when PR is al
 - PR file changes are computed by finding the newest common ancestor (merge base) of feature and main, and comparing that commit's snapshot with the feature branch's HEAD commit.
 
 Rebase
-- Git takes the commits that exist on the current branch but not on the target branch, and replays (recreates) them on top of the target branch.
+- Git takes the commits that exist on the current branch but not on the target branch, and replays (recreates) them on top of the target branch. On merge, it will be simple fast forward merge.
+
+main
+A -> B -> X
+
+feature
+A -> B -> C -> D -> E -> F
+
+Running:
+
+git checkout feature
+git rebase main
+
+Git identifies that C, D, E, and F are unique to feature, then recreates them on top of X:
+
+A -> B -> X -> C' -> D' -> E' -> F'

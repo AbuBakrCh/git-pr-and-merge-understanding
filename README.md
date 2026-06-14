@@ -1,8 +1,8 @@
-IMPORTANT FOR UNDERSTANDING why sometimes github shows differences when PR is already merged.
+## IMPORTANT FOR UNDERSTANDING why sometimes github shows differences when PR is already merged.
 - PR commits are the commits reachable from the feature branch that are not reachable from the target branch (main).
 - PR file changes are computed by finding the newest common ancestor (merge base) of feature and main, and comparing that commit's snapshot with the feature branch's HEAD commit.
 
-Rebase
+### Rebase
 - Git takes the commits that exist on the current branch but not on the target branch, and replays (recreates) them on top of the target branch. On merge, it will be simple fast forward merge.
 
 main
@@ -21,7 +21,7 @@ Git identifies that C, D, E, and F are unique to feature, then recreates them on
 A -> B -> X -> C' -> D' -> E' -> F'
 
 
-Squash and merge:
+### Squash and merge:
 
 - Squash combines multiple commits into one commit.
 - Merge integrates changes from one branch into another.

@@ -22,8 +22,10 @@ A -> B -> X -> C' -> D' -> E' -> F'
 
 
 ### Mental model
-Rebase → rewrites the feature branch's commit history.
-Squash and Merge → leaves the feature branch history alone, but creates a new squashed commit on the target branch
+Rebase → rewrites the feature branch's commit history by recreating its commits on top of the latest commit from the target branch.
 
+Rebase and Merge → leaves the feature branch history alone, but rebases its commits onto the target branch and then fast-forwards the target branch (no merge commit).
 
-<img width="977" height="295" alt="image" src="https://github.com/user-attachments/assets/fb5f4fd4-3fe7-40b7-82f3-e64ab845c9b2" />
+Squash and Merge → leaves the feature branch history alone, but creates a new squashed commit on the target branch.
+
+Merge (Create Merge Commit) → leaves the feature branch history alone and creates a merge commit on the target branch.

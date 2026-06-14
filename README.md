@@ -50,6 +50,8 @@ A --- B --- S --- X --- F'
 
 ### Key Points
 
+<img width="985" height="317" alt="image" src="https://github.com/user-attachments/assets/fac80c94-e995-4fb0-93d2-154bfa17c342" />
+
 * Changes the **feature branch**.
 * Does **not** change `main`.
 * Replays feature branch commits on top of the latest `main`.

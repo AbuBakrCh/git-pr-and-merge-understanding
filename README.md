@@ -21,17 +21,9 @@ Git identifies that C, D, E, and F are unique to feature, then recreates them on
 A -> B -> X -> C' -> D' -> E' -> F'
 
 
-### Squash and merge:
+### Mental model
+Rebase → rewrites the feature branch's commit history.
+Squash and Merge → leaves the feature branch history alone, but creates a new squashed commit on the target branch
 
-- Squash combines multiple commits into one commit.
-- Merge integrates changes from one branch into another.
 
-They are different operations, although many Git hosting platforms (e.g., GitHub) offer a "Squash and Merge" button that performs both concepts together:
-
-- Squash all feature branch commits into a single commit.
-- Merge that single commit into the target branch.
-
-So:
-
-- Squash ≠ Merge
-- Squash and Merge = squash first, then merge the result.
+<img width="977" height="295" alt="image" src="https://github.com/user-attachments/assets/fb5f4fd4-3fe7-40b7-82f3-e64ab845c9b2" />
